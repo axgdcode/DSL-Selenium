@@ -1,0 +1,1 @@
+Design and implementation of the browser automation DSL as an external process language in Java, representing a flow of browser operations.
