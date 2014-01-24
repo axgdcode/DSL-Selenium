@@ -1,3 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="browserautomation" nsURI="http://browserautomation/1.0" nsPrefix="browserautomation"/>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="browserautomation" nsURI="http://browserautomation/1.0" nsPrefix="browserautomation">
+  <eClassifiers xsi:type="ecore:EClass" name="UIOperation" abstract="true" eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Click" abstract="true" eSuperTypes="#//UIOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name=""/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClickIdValue" eSuperTypes="#//Click"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClickLien" eSuperTypes="#//Click"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClickId" eSuperTypes="#//ClickIdValue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeText" eSuperTypes="#//UIOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessOperation" abstract="true" eSuperTypes="#//Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GoToUrl" eSuperTypes="#//UIOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OpenBrowserWindow" eSuperTypes="#//UIOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinksList" eSuperTypes="#//List"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextInputsList" eSuperTypes="#//List"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PicturesList" eSuperTypes="#//List"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionalFlow" abstract="true" eSuperTypes="#//ProcessOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" lowerBound="1" eType="#//If"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" lowerBound="1" eType="#//Then"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" eType="#//Else" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" lowerBound="1" eType="#//If"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//ConditionalFlow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" eType="#//ConditionalFlow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" lowerBound="1" eType="#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Then" eSuperTypes="#//ConditionalFlow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" upperBound="-1" eType="#//Operation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" upperBound="-1" eType="#//Operation"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Else" eSuperTypes="#//ConditionalFlow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" upperBound="-1" eType="#//Operation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" upperBound="-1" eType="#//Operation"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" upperBound="-1"
+        eType="#//Condition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//ProcessOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" eType="#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" eType="#//List" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="" lowerBound="1" eType="#//LoopCondition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LoopCondition" eSuperTypes="#//Condition #//List"/>
+</ecore:EPackage>
