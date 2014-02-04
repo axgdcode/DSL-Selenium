@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see browserautomation.BrowserautomationPackage#getOperationSequence()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface OperationSequence extends EObject {

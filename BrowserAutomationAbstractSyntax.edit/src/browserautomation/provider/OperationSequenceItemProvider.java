@@ -97,6 +97,17 @@ public class OperationSequenceItemProvider
 	}
 
 	/**
+	 * This returns OperationSequence.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/OperationSequence"));
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,6 +193,11 @@ public class OperationSequenceItemProvider
 			(createChildParameter
 				(BrowserautomationPackage.Literals.OPERATION_SEQUENCE__OPERATION,
 				 BrowserautomationFactory.eINSTANCE.createLoopCollection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserautomationPackage.Literals.OPERATION_SEQUENCE__OPERATION_SEQUENCE,
+				 BrowserautomationFactory.eINSTANCE.createOperationSequence()));
 	}
 
 	/**

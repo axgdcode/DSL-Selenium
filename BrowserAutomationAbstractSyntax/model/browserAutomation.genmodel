@@ -44,7 +44,7 @@
     <genClasses ecoreClass="browserAutomation.ecore#//LoopCollection">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//LoopCollection/collectionLoop"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="browserAutomation.ecore#//OperationSequence">
+    <genClasses ecoreClass="browserAutomation.ecore#//OperationSequence">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//OperationSequence/operation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//OperationSequence/operationSequence"/>
     </genClasses>

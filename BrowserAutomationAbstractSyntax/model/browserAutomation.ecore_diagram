@@ -15,7 +15,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Y3FUW4pdEeO-BafaT0GE3w"/>
     </children>
     <element xmi:type="ecore:EClass" href="browserAutomation.ecore#//UIOperation"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3FUUYpdEeO-BafaT0GE3w" x="280" y="84"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3FUUYpdEeO-BafaT0GE3w" x="284" y="84"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Y3F7YIpdEeO-BafaT0GE3w" type="2001" fontName="Lucida Grande">
     <children xmi:type="notation:DecorationNode" xmi:id="_Y3F7YopdEeO-BafaT0GE3w" type="5001"/>

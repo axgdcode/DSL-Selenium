@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.BrowserautomationFactory;
 import browserautomation.BrowserautomationPackage;
 import browserautomation.Else;
 
@@ -145,6 +146,11 @@ public class ElseItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserautomationPackage.Literals.ELSE__OPERATION_SEQUENCE,
+				 BrowserautomationFactory.eINSTANCE.createOperationSequence()));
 	}
 
 	/**

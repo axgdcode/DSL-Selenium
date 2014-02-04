@@ -440,6 +440,29 @@ public class BrowserautomationItemProviderAdapterFactory extends Browserautomati
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link browserautomation.OperationSequence} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OperationSequenceItemProvider operationSequenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link browserautomation.OperationSequence}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOperationSequenceAdapter() {
+		if (operationSequenceItemProvider == null) {
+			operationSequenceItemProvider = new OperationSequenceItemProvider(this);
+		}
+
+		return operationSequenceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -554,6 +577,7 @@ public class BrowserautomationItemProviderAdapterFactory extends Browserautomati
 		if (operationItemProvider != null) operationItemProvider.dispose();
 		if (loopConditionItemProvider != null) loopConditionItemProvider.dispose();
 		if (loopCollectionItemProvider != null) loopCollectionItemProvider.dispose();
+		if (operationSequenceItemProvider != null) operationSequenceItemProvider.dispose();
 	}
 
 }

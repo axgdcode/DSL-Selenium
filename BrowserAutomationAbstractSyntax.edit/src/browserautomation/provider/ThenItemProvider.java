@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.BrowserautomationFactory;
 import browserautomation.BrowserautomationPackage;
 import browserautomation.Then;
 
@@ -145,6 +146,11 @@ public class ThenItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BrowserautomationPackage.Literals.THEN__OPERATION_SEQUENCE,
+				 BrowserautomationFactory.eINSTANCE.createOperationSequence()));
 	}
 
 	/**

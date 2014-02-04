@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class OperationSequenceImpl extends MinimalEObjectImpl.Container implements OperationSequence {
+public class OperationSequenceImpl extends MinimalEObjectImpl.Container implements OperationSequence {
 	/**
 	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

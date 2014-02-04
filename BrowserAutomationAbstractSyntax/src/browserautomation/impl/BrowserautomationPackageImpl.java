@@ -754,7 +754,7 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 		initEClass(loopCollectionEClass, LoopCollection.class, "LoopCollection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoopCollection_CollectionLoop(), this.getCollection(), null, "collectionLoop", null, 1, 1, LoopCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(operationSequenceEClass, OperationSequence.class, "OperationSequence", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(operationSequenceEClass, OperationSequence.class, "OperationSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationSequence_Operation(), this.getOperation(), null, "operation", null, 1, -1, OperationSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperationSequence_OperationSequence(), this.getOperationSequence(), null, "operationSequence", null, 0, -1, OperationSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

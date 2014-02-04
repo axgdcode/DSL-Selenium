@@ -72,6 +72,7 @@ public class BrowserautomationFactoryImpl extends EFactoryImpl implements Browse
 			case BrowserautomationPackage.OPERATION: return createOperation();
 			case BrowserautomationPackage.LOOP_CONDITION: return createLoopCondition();
 			case BrowserautomationPackage.LOOP_COLLECTION: return createLoopCollection();
+			case BrowserautomationPackage.OPERATION_SEQUENCE: return createOperationSequence();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -235,6 +236,16 @@ public class BrowserautomationFactoryImpl extends EFactoryImpl implements Browse
 	public LoopCollection createLoopCollection() {
 		LoopCollectionImpl loopCollection = new LoopCollectionImpl();
 		return loopCollection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationSequence createOperationSequence() {
+		OperationSequenceImpl operationSequence = new OperationSequenceImpl();
+		return operationSequence;
 	}
 
 	/**

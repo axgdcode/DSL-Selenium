@@ -166,6 +166,15 @@ public interface BrowserautomationFactory extends EFactory {
 	LoopCollection createLoopCollection();
 
 	/**
+	 * Returns a new object of class '<em>Operation Sequence</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operation Sequence</em>'.
+	 * @generated
+	 */
+	OperationSequence createOperationSequence();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
