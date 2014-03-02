@@ -102,7 +102,10 @@ public class ConditionalFlowItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ConditionalFlow_type");
+		String label = ((ConditionalFlow)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ConditionalFlow_type") :
+			getString("_UI_ConditionalFlow_type") + " " + label;
 	}
 
 	/**

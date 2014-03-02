@@ -6,6 +6,7 @@ import browserautomation.BrowserautomationPackage;
 import browserautomation.Collection;
 import browserautomation.LoopCollection;
 
+import browserautomation.OperationSequence;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link browserautomation.impl.LoopCollectionImpl#getCollectionLoop <em>Collection Loop</em>}</li>
+ *   <li>{@link browserautomation.impl.LoopCollectionImpl#getOperations <em>Operations</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +39,16 @@ public class LoopCollectionImpl extends LoopImpl implements LoopCollection {
 	 * @ordered
 	 */
 	protected Collection collectionLoop;
+
+	/**
+	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected OperationSequence operations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +117,44 @@ public class LoopCollectionImpl extends LoopImpl implements LoopCollection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OperationSequence getOperations() {
+		if (operations != null && operations.eIsProxy()) {
+			InternalEObject oldOperations = (InternalEObject)operations;
+			operations = (OperationSequence)eResolveProxy(oldOperations);
+			if (operations != oldOperations) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BrowserautomationPackage.LOOP_COLLECTION__OPERATIONS, oldOperations, operations));
+			}
+		}
+		return operations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationSequence basicGetOperations() {
+		return operations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOperations(OperationSequence newOperations) {
+		OperationSequence oldOperations = operations;
+		operations = newOperations;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserautomationPackage.LOOP_COLLECTION__OPERATIONS, oldOperations, operations));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -124,6 +174,9 @@ public class LoopCollectionImpl extends LoopImpl implements LoopCollection {
 		switch (featureID) {
 			case BrowserautomationPackage.LOOP_COLLECTION__COLLECTION_LOOP:
 				return getCollectionLoop();
+			case BrowserautomationPackage.LOOP_COLLECTION__OPERATIONS:
+				if (resolve) return getOperations();
+				return basicGetOperations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,6 +191,9 @@ public class LoopCollectionImpl extends LoopImpl implements LoopCollection {
 		switch (featureID) {
 			case BrowserautomationPackage.LOOP_COLLECTION__COLLECTION_LOOP:
 				setCollectionLoop((Collection)newValue);
+				return;
+			case BrowserautomationPackage.LOOP_COLLECTION__OPERATIONS:
+				setOperations((OperationSequence)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,6 +210,9 @@ public class LoopCollectionImpl extends LoopImpl implements LoopCollection {
 			case BrowserautomationPackage.LOOP_COLLECTION__COLLECTION_LOOP:
 				setCollectionLoop((Collection)null);
 				return;
+			case BrowserautomationPackage.LOOP_COLLECTION__OPERATIONS:
+				setOperations((OperationSequence)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,6 +227,8 @@ public class LoopCollectionImpl extends LoopImpl implements LoopCollection {
 		switch (featureID) {
 			case BrowserautomationPackage.LOOP_COLLECTION__COLLECTION_LOOP:
 				return collectionLoop != null;
+			case BrowserautomationPackage.LOOP_COLLECTION__OPERATIONS:
+				return operations != null;
 		}
 		return super.eIsSet(featureID);
 	}

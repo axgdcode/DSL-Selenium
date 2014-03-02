@@ -4,9 +4,7 @@ package browserautomation.tests;
 
 import browserautomation.BrowserautomationFactory;
 import browserautomation.Operation;
-
 import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**

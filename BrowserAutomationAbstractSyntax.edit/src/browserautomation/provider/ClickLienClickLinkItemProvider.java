@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.ClickLienClickLink;
 import java.util.Collection;
 import java.util.List;
 
@@ -74,7 +75,10 @@ public class ClickLienClickLinkItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ClickLienClickLink_type");
+		String label = ((ClickLienClickLink)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ClickLienClickLink_type") :
+			getString("_UI_ClickLienClickLink_type") + " " + label;
 	}
 
 	/**

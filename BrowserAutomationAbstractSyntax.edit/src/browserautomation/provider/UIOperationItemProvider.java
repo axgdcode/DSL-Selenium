@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.UIOperation;
 import java.util.Collection;
 import java.util.List;
 
@@ -63,7 +64,10 @@ public class UIOperationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_UIOperation_type");
+		String label = ((UIOperation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_UIOperation_type") :
+			getString("_UI_UIOperation_type") + " " + label;
 	}
 
 	/**

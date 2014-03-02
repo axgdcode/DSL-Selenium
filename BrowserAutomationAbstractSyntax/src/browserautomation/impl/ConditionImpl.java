@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link browserautomation.impl.ConditionImpl#getCondition <em>Condition</em>}</li>
+ *   <li>{@link browserautomation.impl.ConditionImpl#isExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,6 +37,25 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * @ordered
 	 */
 	protected Condition condition;
+
+	/**
+	 * The default value of the '{@link #isExpression() <em>Expression</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isExpression()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean EXPRESSION_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isExpression() <em>Expression</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isExpression()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean expression = EXPRESSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,12 +119,35 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isExpression() {
+		return expression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpression(boolean newExpression) {
+		boolean oldExpression = expression;
+		expression = newExpression;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserautomationPackage.CONDITION__EXPRESSION, oldExpression, expression));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BrowserautomationPackage.CONDITION__CONDITION:
 				if (resolve) return getCondition();
 				return basicGetCondition();
+			case BrowserautomationPackage.CONDITION__EXPRESSION:
+				return isExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,6 +162,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		switch (featureID) {
 			case BrowserautomationPackage.CONDITION__CONDITION:
 				setCondition((Condition)newValue);
+				return;
+			case BrowserautomationPackage.CONDITION__EXPRESSION:
+				setExpression((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,6 +181,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 			case BrowserautomationPackage.CONDITION__CONDITION:
 				setCondition((Condition)null);
 				return;
+			case BrowserautomationPackage.CONDITION__EXPRESSION:
+				setExpression(EXPRESSION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -149,8 +198,26 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		switch (featureID) {
 			case BrowserautomationPackage.CONDITION__CONDITION:
 				return condition != null;
+			case BrowserautomationPackage.CONDITION__EXPRESSION:
+				return expression != EXPRESSION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (expression: ");
+		result.append(expression);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ConditionImpl

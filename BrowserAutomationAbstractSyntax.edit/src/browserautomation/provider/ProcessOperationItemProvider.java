@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.ProcessOperation;
 import java.util.Collection;
 import java.util.List;
 
@@ -63,7 +64,10 @@ public class ProcessOperationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProcessOperation_type");
+		String label = ((ProcessOperation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ProcessOperation_type") :
+			getString("_UI_ProcessOperation_type") + " " + label;
 	}
 
 	/**

@@ -28,6 +28,7 @@ import browserautomation.Then;
 import browserautomation.TypeText;
 import browserautomation.UIOperation;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -322,6 +323,24 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTypeText_Text() {
+		return (EAttribute)typeTextEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTypeText_IdBlock() {
+		return (EAttribute)typeTextEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProcessOperation() {
 		return processOperationEClass;
 	}
@@ -333,6 +352,15 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 	 */
 	public EClass getGoToUrl() {
 		return goToUrlEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGoToUrl_Url() {
+		return (EAttribute)goToUrlEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -493,8 +521,26 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCondition_Expression() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOperation() {
 		return operationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOperation_Name() {
+		return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -529,6 +575,15 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLoopCondition_Operations() {
+		return (EReference)loopConditionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLoopCollection() {
 		return loopCollectionEClass;
 	}
@@ -540,6 +595,15 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 	 */
 	public EReference getLoopCollection_CollectionLoop() {
 		return (EReference)loopCollectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoopCollection_Operations() {
+		return (EReference)loopCollectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -608,10 +672,13 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 		clickIdValueEClass = createEClass(CLICK_ID_VALUE);
 
 		typeTextEClass = createEClass(TYPE_TEXT);
+		createEAttribute(typeTextEClass, TYPE_TEXT__TEXT);
+		createEAttribute(typeTextEClass, TYPE_TEXT__ID_BLOCK);
 
 		processOperationEClass = createEClass(PROCESS_OPERATION);
 
 		goToUrlEClass = createEClass(GO_TO_URL);
+		createEAttribute(goToUrlEClass, GO_TO_URL__URL);
 
 		openBrowserWindowEClass = createEClass(OPEN_BROWSER_WINDOW);
 
@@ -639,16 +706,20 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 
 		conditionEClass = createEClass(CONDITION);
 		createEReference(conditionEClass, CONDITION__CONDITION);
+		createEAttribute(conditionEClass, CONDITION__EXPRESSION);
 
 		operationEClass = createEClass(OPERATION);
+		createEAttribute(operationEClass, OPERATION__NAME);
 
 		loopEClass = createEClass(LOOP);
 
 		loopConditionEClass = createEClass(LOOP_CONDITION);
 		createEReference(loopConditionEClass, LOOP_CONDITION__CONDITION_LOOP);
+		createEReference(loopConditionEClass, LOOP_CONDITION__OPERATIONS);
 
 		loopCollectionEClass = createEClass(LOOP_COLLECTION);
 		createEReference(loopCollectionEClass, LOOP_COLLECTION__COLLECTION_LOOP);
+		createEReference(loopCollectionEClass, LOOP_COLLECTION__OPERATIONS);
 
 		operationSequenceEClass = createEClass(OPERATION_SEQUENCE);
 		createEReference(operationSequenceEClass, OPERATION_SEQUENCE__OPERATION);
@@ -712,10 +783,13 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 		initEClass(clickIdValueEClass, ClickIdValue.class, "ClickIdValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(typeTextEClass, TypeText.class, "TypeText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTypeText_Text(), ecorePackage.getEString(), "text", null, 0, 1, TypeText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTypeText_IdBlock(), ecorePackage.getEString(), "idBlock", null, 0, 1, TypeText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processOperationEClass, ProcessOperation.class, "ProcessOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(goToUrlEClass, GoToUrl.class, "GoToUrl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGoToUrl_Url(), ecorePackage.getEString(), "url", null, 0, 1, GoToUrl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(openBrowserWindowEClass, OpenBrowserWindow.class, "OpenBrowserWindow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -743,16 +817,20 @@ public class BrowserautomationPackageImpl extends EPackageImpl implements Browse
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCondition_Condition(), this.getCondition(), null, "condition", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_Expression(), ecorePackage.getEBoolean(), "expression", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOperation_Name(), ecorePackage.getEString(), "name", "operation", 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopEClass, Loop.class, "Loop", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(loopConditionEClass, LoopCondition.class, "LoopCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoopCondition_ConditionLoop(), this.getCondition(), null, "conditionLoop", null, 1, 1, LoopCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopCondition_Operations(), this.getOperationSequence(), null, "operations", null, 1, 1, LoopCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loopCollectionEClass, LoopCollection.class, "LoopCollection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoopCollection_CollectionLoop(), this.getCollection(), null, "collectionLoop", null, 1, 1, LoopCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopCollection_Operations(), this.getOperationSequence(), null, "operations", null, 1, 1, LoopCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationSequenceEClass, OperationSequence.class, "OperationSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationSequence_Operation(), this.getOperation(), null, "operation", null, 1, -1, OperationSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

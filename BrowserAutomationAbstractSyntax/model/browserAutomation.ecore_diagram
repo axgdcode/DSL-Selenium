@@ -117,7 +117,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Y3Jly4pdEeO-BafaT0GE3w"/>
     </children>
     <element xmi:type="ecore:EClass" href="browserAutomation.ecore#//ProcessOperation"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3JlwYpdEeO-BafaT0GE3w" x="548" y="216"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3JlwYpdEeO-BafaT0GE3w" x="548" y="180"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Y3KM0IpdEeO-BafaT0GE3w" type="2001" fontName="Lucida Grande">
     <children xmi:type="notation:DecorationNode" xmi:id="_Y3KM0opdEeO-BafaT0GE3w" type="5001"/>
@@ -236,7 +236,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Y3MpGYpdEeO-BafaT0GE3w"/>
     </children>
     <element xmi:type="ecore:EClass" href="browserAutomation.ecore#//ConditionalFlow"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3MCFYpdEeO-BafaT0GE3w" x="568" y="284"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3MCFYpdEeO-BafaT0GE3w" x="556" y="292"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Y3MpGopdEeO-BafaT0GE3w" type="2001" fontName="Lucida Grande">
     <children xmi:type="notation:DecorationNode" xmi:id="_Y3MpHIpdEeO-BafaT0GE3w" type="5001"/>
@@ -304,7 +304,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Y3N3PopdEeO-BafaT0GE3w"/>
     </children>
     <element xmi:type="ecore:EClass" href="browserAutomation.ecore#//Condition"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3N3NIpdEeO-BafaT0GE3w" x="532" y="504"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y3N3NIpdEeO-BafaT0GE3w" x="544" y="504"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Y3N3P4pdEeO-BafaT0GE3w" type="2001" fontName="Lucida Grande">
     <children xmi:type="notation:DecorationNode" xmi:id="_Y3N3QYpdEeO-BafaT0GE3w" type="5001"/>

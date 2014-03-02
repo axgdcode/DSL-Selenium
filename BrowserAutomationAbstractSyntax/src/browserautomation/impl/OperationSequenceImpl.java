@@ -2,23 +2,17 @@
  */
 package browserautomation.impl;
 
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import browserautomation.BrowserautomationPackage;
 import browserautomation.Operation;
 import browserautomation.OperationSequence;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +29,62 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class OperationSequenceImpl extends MinimalEObjectImpl.Container implements OperationSequence {
+
+//	public void execute(){
+//
+//		BufferedReader br = null;
+//		String in = "";
+//		try {
+//
+//			String sCurrentLine;
+//
+//			br = new BufferedReader(new FileReader("/Users/Axel/Desktop/scenar.txt"));
+//
+//			while ((sCurrentLine = br.readLine()) != null) {
+//				in+=(sCurrentLine);
+//			}
+//
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		} finally {
+//			try {
+//				if (br != null)br.close();
+//			} catch (IOException ex) {
+//				ex.printStackTrace();
+//			}
+//		}
+//
+//
+//		String[] actions = in.split(";");
+//
+//
+//		WebDriver driver = null;
+//		WebElement element = null;
+//		
+//		for (int i=0; i<actions.length; i++){
+//			
+//			System.out.println("i: " +i );
+//			System.out.println("action: " +actions[i] );
+//			if(actions[i].equals(EnumOperation.OUVRIR_NAVIGATEUR.getName())){
+//				 driver = new FirefoxDriver();
+//			} else if (actions[i].contains(EnumOperation.GO_TOURL.toString()) && driver!=null){
+//				
+//				String url = actions[i].split("=")[1];
+//				url.replace(";", "");
+//				driver.get(url);
+//			} else if  (actions[i].contains(EnumOperation.ECRIRE.getName()) && driver!=null){
+//				String[] id_bloc = actions[i].split("dans ");
+//				id_bloc[1].replace(";", "");
+//				element = driver.findElement(By.name(id_bloc[1]));
+//				String word = id_bloc[0].split("=")[1];
+//				word.replace(";", "");
+//				element.sendKeys(word);
+//			} else if(actions[i].contains(EnumOperation.LANCER_RECHERCHE.getName()) && element!=null){
+//				element.submit();
+//			}
+//		}
+//	}
+
 	/**
 	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

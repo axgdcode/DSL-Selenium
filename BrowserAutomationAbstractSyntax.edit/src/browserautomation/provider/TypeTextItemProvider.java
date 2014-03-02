@@ -3,18 +3,23 @@
 package browserautomation.provider;
 
 
+import browserautomation.BrowserautomationPackage;
+import browserautomation.TypeText;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link browserautomation.TypeText} object.
@@ -51,8 +56,54 @@ public class TypeTextItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTextPropertyDescriptor(object);
+			addIdBlockPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Text feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TypeText_text_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TypeText_text_feature", "_UI_TypeText_type"),
+				 BrowserautomationPackage.Literals.TYPE_TEXT__TEXT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id Block feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdBlockPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TypeText_idBlock_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TypeText_idBlock_feature", "_UI_TypeText_type"),
+				 BrowserautomationPackage.Literals.TYPE_TEXT__ID_BLOCK,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -74,7 +125,10 @@ public class TypeTextItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_TypeText_type");
+		String label = ((TypeText)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TypeText_type") :
+			getString("_UI_TypeText_type") + " " + label;
 	}
 
 	/**
@@ -87,6 +141,13 @@ public class TypeTextItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(TypeText.class)) {
+			case BrowserautomationPackage.TYPE_TEXT__TEXT:
+			case BrowserautomationPackage.TYPE_TEXT__ID_BLOCK:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

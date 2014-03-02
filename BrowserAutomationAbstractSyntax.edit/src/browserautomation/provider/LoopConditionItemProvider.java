@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -58,8 +59,31 @@ public class LoopConditionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addOperationsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Operations feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOperationsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LoopCondition_operations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LoopCondition_operations_feature", "_UI_LoopCondition_type"),
+				 BrowserautomationPackage.Literals.LOOP_CONDITION__OPERATIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -111,7 +135,10 @@ public class LoopConditionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_LoopCondition_type");
+		String label = ((LoopCondition)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_LoopCondition_type") :
+			getString("_UI_LoopCondition_type") + " " + label;
 	}
 
 	/**

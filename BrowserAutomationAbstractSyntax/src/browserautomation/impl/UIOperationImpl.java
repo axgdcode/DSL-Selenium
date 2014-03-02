@@ -22,6 +22,7 @@ public abstract class UIOperationImpl extends OperationImpl implements UIOperati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	
 	protected UIOperationImpl() {
 		super();
 	}

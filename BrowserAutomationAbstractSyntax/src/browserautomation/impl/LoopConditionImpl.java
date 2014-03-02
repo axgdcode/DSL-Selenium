@@ -6,6 +6,7 @@ import browserautomation.BrowserautomationPackage;
 import browserautomation.Condition;
 import browserautomation.LoopCondition;
 
+import browserautomation.OperationSequence;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link browserautomation.impl.LoopConditionImpl#getConditionLoop <em>Condition Loop</em>}</li>
+ *   <li>{@link browserautomation.impl.LoopConditionImpl#getOperations <em>Operations</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +39,16 @@ public class LoopConditionImpl extends LoopImpl implements LoopCondition {
 	 * @ordered
 	 */
 	protected Condition conditionLoop;
+
+	/**
+	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected OperationSequence operations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +117,44 @@ public class LoopConditionImpl extends LoopImpl implements LoopCondition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OperationSequence getOperations() {
+		if (operations != null && operations.eIsProxy()) {
+			InternalEObject oldOperations = (InternalEObject)operations;
+			operations = (OperationSequence)eResolveProxy(oldOperations);
+			if (operations != oldOperations) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BrowserautomationPackage.LOOP_CONDITION__OPERATIONS, oldOperations, operations));
+			}
+		}
+		return operations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationSequence basicGetOperations() {
+		return operations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOperations(OperationSequence newOperations) {
+		OperationSequence oldOperations = operations;
+		operations = newOperations;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BrowserautomationPackage.LOOP_CONDITION__OPERATIONS, oldOperations, operations));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -124,6 +174,9 @@ public class LoopConditionImpl extends LoopImpl implements LoopCondition {
 		switch (featureID) {
 			case BrowserautomationPackage.LOOP_CONDITION__CONDITION_LOOP:
 				return getConditionLoop();
+			case BrowserautomationPackage.LOOP_CONDITION__OPERATIONS:
+				if (resolve) return getOperations();
+				return basicGetOperations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,6 +191,9 @@ public class LoopConditionImpl extends LoopImpl implements LoopCondition {
 		switch (featureID) {
 			case BrowserautomationPackage.LOOP_CONDITION__CONDITION_LOOP:
 				setConditionLoop((Condition)newValue);
+				return;
+			case BrowserautomationPackage.LOOP_CONDITION__OPERATIONS:
+				setOperations((OperationSequence)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,6 +210,9 @@ public class LoopConditionImpl extends LoopImpl implements LoopCondition {
 			case BrowserautomationPackage.LOOP_CONDITION__CONDITION_LOOP:
 				setConditionLoop((Condition)null);
 				return;
+			case BrowserautomationPackage.LOOP_CONDITION__OPERATIONS:
+				setOperations((OperationSequence)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,6 +227,8 @@ public class LoopConditionImpl extends LoopImpl implements LoopCondition {
 		switch (featureID) {
 			case BrowserautomationPackage.LOOP_CONDITION__CONDITION_LOOP:
 				return conditionLoop != null;
+			case BrowserautomationPackage.LOOP_CONDITION__OPERATIONS:
+				return operations != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -2,6 +2,7 @@
  */
 package browserautomation;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -66,13 +67,22 @@ public interface BrowserautomationPackage extends EPackage {
 	int OPERATION = 18;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_FEATURE_COUNT = 0;
+	int OPERATION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Operation</em>' class.
@@ -92,6 +102,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int UI_OPERATION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UI_OPERATION__NAME = OPERATION__NAME;
 
 	/**
 	 * The number of structural features of the '<em>UI Operation</em>' class.
@@ -122,6 +141,15 @@ public interface BrowserautomationPackage extends EPackage {
 	int CLICK = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICK__NAME = UI_OPERATION__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Click</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +176,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int CLICK_ID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICK_ID__NAME = CLICK__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Click Id</em>' class.
@@ -178,6 +215,15 @@ public interface BrowserautomationPackage extends EPackage {
 	int CLICK_LIEN_CLICK_LINK = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICK_LIEN_CLICK_LINK__NAME = CLICK__NAME;
+
+	/**
 	 * The number of structural features of the '<em>Click Lien Click Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,6 +250,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int CLICK_ID_VALUE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICK_ID_VALUE__NAME = CLICK_ID__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Click Id Value</em>' class.
@@ -234,13 +289,40 @@ public interface BrowserautomationPackage extends EPackage {
 	int TYPE_TEXT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TEXT__NAME = UI_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TEXT__TEXT = UI_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id Block</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_TEXT__ID_BLOCK = UI_OPERATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Type Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TYPE_TEXT_FEATURE_COUNT = UI_OPERATION_FEATURE_COUNT + 0;
+	int TYPE_TEXT_FEATURE_COUNT = UI_OPERATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Type Text</em>' class.
@@ -260,6 +342,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int PROCESS_OPERATION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_OPERATION__NAME = OPERATION__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Process Operation</em>' class.
@@ -290,13 +381,31 @@ public interface BrowserautomationPackage extends EPackage {
 	int GO_TO_URL = 7;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GO_TO_URL__NAME = UI_OPERATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GO_TO_URL__URL = UI_OPERATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Go To Url</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GO_TO_URL_FEATURE_COUNT = UI_OPERATION_FEATURE_COUNT + 0;
+	int GO_TO_URL_FEATURE_COUNT = UI_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Go To Url</em>' class.
@@ -316,6 +425,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int OPEN_BROWSER_WINDOW = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPEN_BROWSER_WINDOW__NAME = UI_OPERATION__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Open Browser Window</em>' class.
@@ -456,6 +574,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int CONDITIONAL_FLOW = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITIONAL_FLOW__NAME = PROCESS_OPERATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>If</b></em>' containment reference.
@@ -633,13 +760,22 @@ public interface BrowserautomationPackage extends EPackage {
 	int CONDITION__CONDITION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Expression</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__EXPRESSION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = 1;
+	int CONDITION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Condition</em>' class.
@@ -659,6 +795,15 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	int LOOP = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__NAME = PROCESS_OPERATION__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Loop</em>' class.
@@ -689,6 +834,15 @@ public interface BrowserautomationPackage extends EPackage {
 	int LOOP_CONDITION = 20;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_CONDITION__NAME = LOOP__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Condition Loop</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -698,13 +852,22 @@ public interface BrowserautomationPackage extends EPackage {
 	int LOOP_CONDITION__CONDITION_LOOP = LOOP_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Operations</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_CONDITION__OPERATIONS = LOOP_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Loop Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_CONDITION_FEATURE_COUNT = LOOP_FEATURE_COUNT + 1;
+	int LOOP_CONDITION_FEATURE_COUNT = LOOP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Loop Condition</em>' class.
@@ -726,6 +889,15 @@ public interface BrowserautomationPackage extends EPackage {
 	int LOOP_COLLECTION = 21;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_COLLECTION__NAME = LOOP__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Collection Loop</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,13 +907,22 @@ public interface BrowserautomationPackage extends EPackage {
 	int LOOP_COLLECTION__COLLECTION_LOOP = LOOP_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Operations</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_COLLECTION__OPERATIONS = LOOP_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Loop Collection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_COLLECTION_FEATURE_COUNT = LOOP_FEATURE_COUNT + 1;
+	int LOOP_COLLECTION_FEATURE_COUNT = LOOP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Loop Collection</em>' class.
@@ -860,6 +1041,28 @@ public interface BrowserautomationPackage extends EPackage {
 	EClass getTypeText();
 
 	/**
+	 * Returns the meta object for the attribute '{@link browserautomation.TypeText#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see browserautomation.TypeText#getText()
+	 * @see #getTypeText()
+	 * @generated
+	 */
+	EAttribute getTypeText_Text();
+
+	/**
+	 * Returns the meta object for the attribute '{@link browserautomation.TypeText#getIdBlock <em>Id Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Block</em>'.
+	 * @see browserautomation.TypeText#getIdBlock()
+	 * @see #getTypeText()
+	 * @generated
+	 */
+	EAttribute getTypeText_IdBlock();
+
+	/**
 	 * Returns the meta object for class '{@link browserautomation.ProcessOperation <em>Process Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -878,6 +1081,17 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGoToUrl();
+
+	/**
+	 * Returns the meta object for the attribute '{@link browserautomation.GoToUrl#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see browserautomation.GoToUrl#getUrl()
+	 * @see #getGoToUrl()
+	 * @generated
+	 */
+	EAttribute getGoToUrl_Url();
 
 	/**
 	 * Returns the meta object for class '{@link browserautomation.OpenBrowserWindow <em>Open Browser Window</em>}'.
@@ -1057,6 +1271,17 @@ public interface BrowserautomationPackage extends EPackage {
 	EReference getCondition_Condition();
 
 	/**
+	 * Returns the meta object for the attribute '{@link browserautomation.Condition#isExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Expression</em>'.
+	 * @see browserautomation.Condition#isExpression()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EAttribute getCondition_Expression();
+
+	/**
 	 * Returns the meta object for class '{@link browserautomation.Operation <em>Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1065,6 +1290,17 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOperation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link browserautomation.Operation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see browserautomation.Operation#getName()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EAttribute getOperation_Name();
 
 	/**
 	 * Returns the meta object for class '{@link browserautomation.Loop <em>Loop</em>}'.
@@ -1098,6 +1334,17 @@ public interface BrowserautomationPackage extends EPackage {
 	EReference getLoopCondition_ConditionLoop();
 
 	/**
+	 * Returns the meta object for the reference '{@link browserautomation.LoopCondition#getOperations <em>Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Operations</em>'.
+	 * @see browserautomation.LoopCondition#getOperations()
+	 * @see #getLoopCondition()
+	 * @generated
+	 */
+	EReference getLoopCondition_Operations();
+
+	/**
 	 * Returns the meta object for class '{@link browserautomation.LoopCollection <em>Loop Collection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1117,6 +1364,17 @@ public interface BrowserautomationPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLoopCollection_CollectionLoop();
+
+	/**
+	 * Returns the meta object for the reference '{@link browserautomation.LoopCollection#getOperations <em>Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Operations</em>'.
+	 * @see browserautomation.LoopCollection#getOperations()
+	 * @see #getLoopCollection()
+	 * @generated
+	 */
+	EReference getLoopCollection_Operations();
 
 	/**
 	 * Returns the meta object for class '{@link browserautomation.OperationSequence <em>Operation Sequence</em>}'.
@@ -1234,6 +1492,22 @@ public interface BrowserautomationPackage extends EPackage {
 		EClass TYPE_TEXT = eINSTANCE.getTypeText();
 
 		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPE_TEXT__TEXT = eINSTANCE.getTypeText_Text();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Block</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TYPE_TEXT__ID_BLOCK = eINSTANCE.getTypeText_IdBlock();
+
+		/**
 		 * The meta object literal for the '{@link browserautomation.impl.ProcessOperationImpl <em>Process Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1252,6 +1526,14 @@ public interface BrowserautomationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GO_TO_URL = eINSTANCE.getGoToUrl();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GO_TO_URL__URL = eINSTANCE.getGoToUrl_Url();
 
 		/**
 		 * The meta object literal for the '{@link browserautomation.impl.OpenBrowserWindowImpl <em>Open Browser Window</em>}' class.
@@ -1410,6 +1692,14 @@ public interface BrowserautomationPackage extends EPackage {
 		EReference CONDITION__CONDITION = eINSTANCE.getCondition_Condition();
 
 		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDITION__EXPRESSION = eINSTANCE.getCondition_Expression();
+
+		/**
 		 * The meta object literal for the '{@link browserautomation.impl.OperationImpl <em>Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1418,6 +1708,14 @@ public interface BrowserautomationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OPERATION = eINSTANCE.getOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATION__NAME = eINSTANCE.getOperation_Name();
 
 		/**
 		 * The meta object literal for the '{@link browserautomation.impl.LoopImpl <em>Loop</em>}' class.
@@ -1448,6 +1746,14 @@ public interface BrowserautomationPackage extends EPackage {
 		EReference LOOP_CONDITION__CONDITION_LOOP = eINSTANCE.getLoopCondition_ConditionLoop();
 
 		/**
+		 * The meta object literal for the '<em><b>Operations</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOOP_CONDITION__OPERATIONS = eINSTANCE.getLoopCondition_Operations();
+
+		/**
 		 * The meta object literal for the '{@link browserautomation.impl.LoopCollectionImpl <em>Loop Collection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1464,6 +1770,14 @@ public interface BrowserautomationPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOOP_COLLECTION__COLLECTION_LOOP = eINSTANCE.getLoopCollection_CollectionLoop();
+
+		/**
+		 * The meta object literal for the '<em><b>Operations</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOOP_COLLECTION__OPERATIONS = eINSTANCE.getLoopCollection_Operations();
 
 		/**
 		 * The meta object literal for the '{@link browserautomation.impl.OperationSequenceImpl <em>Operation Sequence</em>}' class.

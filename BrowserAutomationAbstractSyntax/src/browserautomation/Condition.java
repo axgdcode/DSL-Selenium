@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link browserautomation.Condition#getCondition <em>Condition</em>}</li>
+ *   <li>{@link browserautomation.Condition#isExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,5 +47,31 @@ public interface Condition extends EObject {
 	 * @generated
 	 */
 	void setCondition(Condition value);
+
+	/**
+	 * Returns the value of the '<em><b>Expression</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Expression</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expression</em>' attribute.
+	 * @see #setExpression(boolean)
+	 * @see browserautomation.BrowserautomationPackage#getCondition_Expression()
+	 * @model
+	 * @generated
+	 */
+	boolean isExpression();
+
+	/**
+	 * Sets the value of the '{@link browserautomation.Condition#isExpression <em>Expression</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expression</em>' attribute.
+	 * @see #isExpression()
+	 * @generated
+	 */
+	void setExpression(boolean value);
 
 } // Condition

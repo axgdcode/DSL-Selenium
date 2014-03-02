@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.Loop;
 import java.util.Collection;
 import java.util.List;
 
@@ -63,7 +64,10 @@ public class LoopItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Loop_type");
+		String label = ((Loop)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Loop_type") :
+			getString("_UI_Loop_type") + " " + label;
 	}
 
 	/**

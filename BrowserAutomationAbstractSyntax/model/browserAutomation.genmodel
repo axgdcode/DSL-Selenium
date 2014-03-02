@@ -11,9 +11,14 @@
     <genClasses ecoreClass="browserAutomation.ecore#//ClickId"/>
     <genClasses ecoreClass="browserAutomation.ecore#//ClickLienClickLink"/>
     <genClasses ecoreClass="browserAutomation.ecore#//ClickIdValue"/>
-    <genClasses ecoreClass="browserAutomation.ecore#//TypeText"/>
+    <genClasses ecoreClass="browserAutomation.ecore#//TypeText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute browserAutomation.ecore#//TypeText/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute browserAutomation.ecore#//TypeText/idBlock"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="browserAutomation.ecore#//ProcessOperation"/>
-    <genClasses ecoreClass="browserAutomation.ecore#//GoToUrl"/>
+    <genClasses ecoreClass="browserAutomation.ecore#//GoToUrl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute browserAutomation.ecore#//GoToUrl/url"/>
+    </genClasses>
     <genClasses ecoreClass="browserAutomation.ecore#//OpenBrowserWindow"/>
     <genClasses image="false" ecoreClass="browserAutomation.ecore#//Collection"/>
     <genClasses ecoreClass="browserAutomation.ecore#//LinksCollection"/>
@@ -35,14 +40,19 @@
     </genClasses>
     <genClasses ecoreClass="browserAutomation.ecore#//Condition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//Condition/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute browserAutomation.ecore#//Condition/expression"/>
     </genClasses>
-    <genClasses ecoreClass="browserAutomation.ecore#//Operation"/>
+    <genClasses ecoreClass="browserAutomation.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute browserAutomation.ecore#//Operation/name"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="browserAutomation.ecore#//Loop"/>
     <genClasses ecoreClass="browserAutomation.ecore#//LoopCondition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//LoopCondition/conditionLoop"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//LoopCondition/operations"/>
     </genClasses>
     <genClasses ecoreClass="browserAutomation.ecore#//LoopCollection">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//LoopCollection/collectionLoop"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//LoopCollection/operations"/>
     </genClasses>
     <genClasses ecoreClass="browserAutomation.ecore#//OperationSequence">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference browserAutomation.ecore#//OperationSequence/operation"/>

@@ -3,6 +3,7 @@
 package browserautomation.provider;
 
 
+import browserautomation.ClickId;
 import java.util.Collection;
 import java.util.List;
 
@@ -74,7 +75,10 @@ public class ClickIdItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ClickId_type");
+		String label = ((ClickId)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ClickId_type") :
+			getString("_UI_ClickId_type") + " " + label;
 	}
 
 	/**
